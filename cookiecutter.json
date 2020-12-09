@@ -6,13 +6,9 @@
     "module_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
     "short_description": "A simple poetry based application",
     "version": "0.1.0",
-    "docs_tool": [
-        "mkdocs",
-        "sphinx",
-        "none"
-    ],
     "license": [
         "MIT",
-        "GNU GPL v3.0"
+        "GNU GPL v3.0",
+        "Proprietary",
     ]
 }
