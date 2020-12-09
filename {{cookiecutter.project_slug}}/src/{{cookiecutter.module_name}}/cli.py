@@ -67,9 +67,11 @@ def run(config_file):
         logger.fatal(exc)
         sys.exit(1)
 
-    s = Server(settings)
+    # TODO: Create your application object
+    s = App(settings)
     try:
         logger.info("Starting")
+        # TODO: Start your application
         s.start()
     except KeyboardInterrupt:
         pass
@@ -77,7 +79,8 @@ def run(config_file):
         logger.exception("Unexpected exception")
     finally:
         logger.info("Shutting down")
-        s.terminate()
+        # TODO: Cleanup code
+        s.stop()
 
     logger.info("All done")
 
