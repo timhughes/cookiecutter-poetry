@@ -25,7 +25,7 @@ build: install lint test ## run `poetry build` to build source distribution and 
 	poetry build
 	
 pyinstaller: install lint test ## Create a binary executable using pyinstaller
-	poetry run pyinstaller src/{{cookiecutter.module_name}}/cli.py --onefile --name {{cookiecutter.module_name}}
+	poetry run pyinstaller src/{{cookiecutter.module_name}}/cli.py --onefile --name {{ cookiecutter.project_slug }}
 
 format: ## Formats you code with Black
 	poetry run black . --target-version=py36
