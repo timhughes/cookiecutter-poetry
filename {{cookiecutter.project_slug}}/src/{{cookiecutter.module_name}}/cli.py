@@ -68,7 +68,7 @@ def run(config_file):
         sys.exit(1)
 
     # TODO: Create your application object
-    s = App(settings)
+    s = {{cookiecutter.module_name}}.NewApp(settings)
     try:
         logger.info("Starting")
         # TODO: Start your application
