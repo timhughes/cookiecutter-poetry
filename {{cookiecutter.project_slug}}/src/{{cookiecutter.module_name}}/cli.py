@@ -22,7 +22,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 @click.group()
 def cli():
-    print("Running")
+    pass
     
 @cli.command()
 @click.option("-v", "--verbose", count=True)
