@@ -1,4 +1,9 @@
+import os
+import sys
+import yaml
+import logging
 import click
+
 import {{cookiecutter.module_name}}
 
 
@@ -10,6 +15,10 @@ logging.basicConfig(
 log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
 logging.basicConfig(level=logging.INFO, format=log_format, datefmt="%Y-%m-%dT%H:%M:%S")
 logger = logging.getLogger("{{cookiecutter.module_name}}")
+
+# set levels for other modules
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+
 
 @click.group()
 def cli():
@@ -70,9 +79,7 @@ def run(config_file):
         logger.info("Shutting down")
         s.terminate()
 
-    logging.info("All done")
-
-
+    logger.info("All done")
 
     
 if __name__ == "__main__":
