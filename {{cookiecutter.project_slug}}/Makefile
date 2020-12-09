@@ -1,7 +1,6 @@
 #
 # vim:ft=make
 # Makefile
-# Tim Hughes, 2020-09-08 20:41
 #
 .DEFAULT_GOAL := help
 .PHONY: test help
