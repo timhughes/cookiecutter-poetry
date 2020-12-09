@@ -1,0 +1,46 @@
+image: centos/python-38-centos7
+
+cache:
+  paths:
+    - .cache/pip
+    - .venv
+
+before_script:
+  - export PATH=${PATH}:${HOME}/.local/bin/
+  - python -V  # Print out python version for debugging
+  - dnf install -y make
+  - python -m pip install --user poetry
+
+lint:
+  tags:
+    - docker
+  script:
+    - make install
+    - make lint
+
+test:
+  tags:
+    - docker
+  script:
+    - make install
+    - make test
+
+build:
+  script:
+    - make install
+    - make build
+  artifacts:
+    paths:
+      - dist
+  only:
+    - master
+
+pyinstaller:
+  script:
+    - make install
+    - make pyinstaller
+  artifacts:
+    paths:
+      - dist
+  only:
+    - master
