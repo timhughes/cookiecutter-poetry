@@ -17,7 +17,7 @@ lint: ## Runs bandit and black in check mode
 	@echo '-------------------------------'
 	poetry run bandit -r src
 
-test: private ## run pytest with coverage
+test: hidden ## run pytest with coverage
 	poetry run pytest --cov tests
 
 build: install lint test ## run `poetry build` to build source distribution and wheel
@@ -29,7 +29,7 @@ pyinstaller: install lint test ## Create a binary executable using pyinstaller
 format: ## Formats you code with Black
 	poetry run black . --target-version=py36
 
-private: # undocumented, for internal usage only
+hidden: # example undocumented, for internal usage only
 	@true
 
 showdeps: ## run poetry to show deps
@@ -39,4 +39,5 @@ showdeps: ## run poetry to show deps
 	@echo "LATEST:"
 	poetry show --latest
 
-
+notebook: ## run the jupyter-lab server
+	poetry run jupyter-lab || { echo "Jupyter-lab not installed:\n\n poetry add jupyterlab"; exit 1; }
