@@ -32,6 +32,9 @@ format: ## Formats you code with Black
 hidden: # example undocumented, for internal usage only
 	@true
 
+run: ## run `poetry run {{ cookiecutter.project_slug }}`
+	poetry run {{ cookiecutter.project_slug }}
+
 showdeps: ## run poetry to show deps
 	@echo "CURRENT:"
 	poetry show --tree
@@ -39,5 +42,10 @@ showdeps: ## run poetry to show deps
 	@echo "LATEST:"
 	poetry show --latest
 
-notebook: ## run the jupyter-lab server
-	poetry run jupyter-lab || { echo "Jupyter-lab not installed:\n\n poetry add jupyterlab"; exit 1; }
+# To use jupyter notebooks you can add it using poetry:
+#
+#   poetry add jupyterlab pandas xeus-python jupyterlab-git jupyterlab-widgets
+#
+lab: ## run the jupyter-lab server
+	poetry run jupyter-lab
+
