@@ -5,19 +5,7 @@ import logging
 import click
 
 import {{cookiecutter.module_name}}
-
-
-logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    level=getattr(logging, os.getenv("LOGLEVEL", "INFO").upper()),
-)
-
-log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
-logging.basicConfig(level=logging.INFO, format=log_format, datefmt="%Y-%m-%dT%H:%M:%S")
-logger = logging.getLogger("{{cookiecutter.module_name}}")
-
-# set levels for other modules
-logging.getLogger("urllib3").setLevel(logging.WARNING)
+from {{cookiecutter.module_name}}.logging import logger
 
 
 @click.group()
