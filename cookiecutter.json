@@ -1,14 +1,21 @@
 {
     "full_name": "Tim Hughes",
     "email": "thughes@thegoldfish.org",
-    "github_username": "timhughes",
+    "github_name": "timhughes",
     "project_slug": "example-project",
     "module_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
-    "short_description": "A simple poetry based application",
-    "version": "0.1.0",
+    "short_description": "A simple application",
+    "version": "0.0.1",
     "license": [
         "MIT",
-        "GNU GPL v3.0",
+        "BSD-3-Clause",
+        "GPL-3.0-or-later",
         "Proprietary"
-    ]
+    ],
+    "command_line_interface": [
+      "click",
+      "no cli"
+    ],
+    "use_jupyterlab": "y",
+    "add_badges": "y"
 }

@@ -5,13 +5,13 @@ import logging
 
 if sys.stdout.isatty():
 # You're running in a real terminal
-    log_format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    LOG_FORMAT="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 else:
-    log_format="%(name)s - %(levelname)s - %(message)s"
+    LOG_FORMAT="%(name)s - %(levelname)s - %(message)s"
 
 logging.basicConfig(
     level=getattr(logging, os.getenv("LOGLEVEL", "INFO").upper()),
-    format=log_format,
+    format=LOG_FORMAT,
     datefmt="%Y-%m-%dT%H:%M:%S"
 )
 
