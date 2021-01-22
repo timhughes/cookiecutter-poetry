@@ -41,6 +41,9 @@ black = {version = "^20.8b1", allow-prereleases = true}
 bandit = "^1.6.2"
 pylint = "^2.6.0"
 bump2version = "^1.0.1"
+vulture = "^2.3"
+jedi-language-server = "^0.22.0"
+reorder-python-imports = "^2.3.6"
 {%- if cookiecutter.command_line_interface != "no cli" %}
 pyinstaller = "^4.1"
 {%- endif %}
