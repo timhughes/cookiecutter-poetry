@@ -24,11 +24,10 @@ classifiers = [
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.module_name }}.cli:cli"
 
 [tool.poetry.dependencies]
-python = "^3.6.10"
+python = "^3.8.0"
 {%- if cookiecutter.use_jupyterlab == "y" %}
 jupyterlab = "^3.0.0"
 pandas = "^1.2.0"
-xeus-python = "^0.9.4"
 jupyterlab_git = "^0.23.3"
 jupyterlab_widgets = "^1.0.0"
 {%- endif %}
