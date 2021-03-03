@@ -1,4 +1,6 @@
 
+import logging
+logger = logging.getLogger("{{cookiecutter.module_name}}")
 
 class App:
 
