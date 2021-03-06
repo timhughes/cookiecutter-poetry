@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "cookiecutter-poetry"
+version = "0.0.1"
+description = """
+Cookiecutter template for a python project with poetry and pytest
+and other goodies"""
+authors = ["Tim Hughes <thughes@thegoldfish.org>"]
+# Use identifier from https://spdx.org/licenses/
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/timhughes/cookiecutter-poetry"
+repository = "https://github.com/timhughes/cookiecutter-poetry"
+documentation = "https://github.com/timhughes/cookiecutter-poetry/blob/master/README.md"
+classifiers = [
+    # https://pypi.org/classifiers/
+    "Environment :: Console",
+    "Development Status :: 1 - Planning",
+]
+[tool.poetry.urls]
+# If you publish you package on PyPI, these will appear in the Project Links section.
+"Bug Tracker" = "https://github.com/timhughes/cookiecutter-poetry/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+cookiecutter = "^1.7.2"
+pytest-cookies = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.0.0"
+pytest-cov = "^2.10.1"
+black = {version = "^20.8b1", allow-prereleases = true}
+bandit = "^1.6.2"
+pylint = "^2.6.0"
+bump2version = "^1.0.1"
+vulture = "^2.3"
+jedi-language-server = "^0.22.0"
+reorder-python-imports = "^2.3.6"
+pyinstaller = "^4.1"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+# Example
+filterwarnings = [
+    "ignore::DeprecationWarning:moto.*:",
+    "ignore::DeprecationWarning:boto.*:",
+]
