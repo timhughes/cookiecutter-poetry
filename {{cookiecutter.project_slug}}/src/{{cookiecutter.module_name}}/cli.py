@@ -6,7 +6,6 @@ import click
 
 import {{cookiecutter.module_name}}
 from {{cookiecutter.module_name}}.app import App
-from {{cookiecutter.module_name}}.logging import logger
 
 if sys.stdout.isatty():
 # You're running in a real terminal

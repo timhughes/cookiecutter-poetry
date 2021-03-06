@@ -85,10 +85,10 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 {% elif cookiecutter.license == 'Proprietary' -%}
+Proprietary and confidential
 Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.full_name }}
 All rights reserved.
 
 Unauthorized copying of this project, via any medium is strictly prohibited
-Proprietary and confidential
 {% endif %}
 
