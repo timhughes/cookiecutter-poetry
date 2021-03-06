@@ -1,3 +1,7 @@
+[![CI Tests](https://github.com/timhughes/cookiecutter-poetry/actions/workflows/python-package.yml/badge.svg)](https://github.com/timhughes/cookiecutter-poetry/actions/workflows/python-package.yml)
+[![Updates](https://pyup.io/repos/github/timhughes/cookiecutter-poetry/shield.svg)](https://pyup.io/repos/github/timhughes/cookiecutter-poetry/)
+
+
 # cookiecutter-poetry
 Cookiecutter template configured with the following:
 
