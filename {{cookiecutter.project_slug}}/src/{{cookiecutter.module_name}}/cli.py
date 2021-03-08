@@ -46,7 +46,7 @@ def version(verbose):
     required=True,
     type=click.Path(exists=True),
 )
-def run(config_file):
+def serve(config_file):
     """Start {{cookiecutter.module_name}} in server mode"""
     try:
         with open(config_file, "r") as stream:
