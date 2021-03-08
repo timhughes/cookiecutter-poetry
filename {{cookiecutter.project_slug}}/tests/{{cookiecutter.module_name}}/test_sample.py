@@ -13,8 +13,8 @@ def test_click_cli():
   runner = CliRunner(mix_stderr=False)
   result = runner.invoke(cli.cli, ['--help'])
   assert result.exit_code == 0
-  assert 'Start example_project in server mode' in result.output
-  assert 'Start example_project in server mode' in result.stdout
+  assert 'Start {{cookiecutter.project_slug}} in server mode' in result.output
+  assert 'Start {{cookiecutter.project_slug}} in server mode' in result.stdout
   assert '' == result.stderr
 {%- elif cookiecutter.command_line_interface == "argparse" %}
 
