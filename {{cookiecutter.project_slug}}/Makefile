@@ -34,7 +34,7 @@ format: ## Formats you code with Black
 	poetry run black . --target-version=py36
 
 test: hidden ## run pytest with coverage
-	poetry run pytest --cov {{cookiecutter.module_name }}
+	poetry run pytest -v --cov {{cookiecutter.module_name }}
 
 build: install lint test ## run `poetry build` to build source distribution and wheel
 	poetry build
