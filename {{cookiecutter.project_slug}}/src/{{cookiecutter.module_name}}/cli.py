@@ -47,7 +47,7 @@ def version(verbose):
     type=click.Path(exists=True),
 )
 def serve(config_file):
-    """Start {{cookiecutter.module_name}} in server mode"""
+    """Start {{cookiecutter.project_slug}} in server mode"""
     try:
         with open(config_file, "r") as stream:
             try:
