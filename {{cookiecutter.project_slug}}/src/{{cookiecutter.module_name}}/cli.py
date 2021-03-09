@@ -48,21 +48,24 @@ def version(verbose):
 )
 def serve(config_file):
     """Start {{cookiecutter.project_slug}} in server mode"""
-    try:
-        with open(config_file, "r") as stream:
-            try:
-                settings = yaml.safe_load(stream)
-            except yaml.YAMLError as exc:
-                click.echo(exc)
-                sys.exit(1)
-    except IOError as exc:
-        logger.fatal("%s: %s", exc.strerror, exc.filename)
-        sys.exit(1)
-    except Exception as exc:
-        logger.fatal(
-            "Cannot load conf file '%s'. Error message is: %s", config_file, exc
-        )
-        sys.exit(1)
+    
+    settings = {}
+    if config_file:
+        try:
+            with open(config_file, "r") as stream:
+                try:
+                    settings = yaml.safe_load(stream)
+                except yaml.YAMLError as exc:
+                    click.echo(exc)
+                    sys.exit(1)
+        except IOError as exc:
+            logger.fatal("%s: %s", exc.strerror, exc.filename)
+            sys.exit(1)
+        except Exception as exc:
+            logger.fatal(
+                "Cannot load conf file '%s'. Error message is: %s", config_file, exc
+            )
+            sys.exit(1)
 
     # TODO: Create your application object
     app = App(settings)
