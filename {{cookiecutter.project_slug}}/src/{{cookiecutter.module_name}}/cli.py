@@ -43,7 +43,6 @@ def version(verbose):
     "--conf",
     "--config",
     "config_file",
-    required=True,
     type=click.Path(exists=True),
 )
 def serve(config_file):
