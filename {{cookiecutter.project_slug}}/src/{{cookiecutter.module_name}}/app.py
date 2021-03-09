@@ -8,8 +8,7 @@ class App:
         self.settings = settings    
 
     def start(self):
-        print("Starting")
+        logger.info("{{cookiecutter.module_name}} Starting")
 
     def stop(self):
-        print("Stopping")
-
+        logger.info("{{cookiecutter.module_name}} Stopping")
