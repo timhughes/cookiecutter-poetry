@@ -65,7 +65,7 @@ def serve(config_file):
         sys.exit(1)
 
     # TODO: Create your application object
-    app = App()
+    app = App(settings)
     try:
         logger.info("Starting")
         # TODO: Start your application
