@@ -20,4 +20,9 @@ Run `make` for help
     make format              # Formats you code with Black
     make test                # run pytest with coverage
     make build               # run `poetry build` to build source distribution and wheel
-
+{%- if cookiecutter.command_line_interface != "no cli" %}
+    make pyinstaller         # Create a binary executable using pyinstaller
+{%- endif %}
+{%- if cookiecutter.use_jupyterlab == "y" %}
+    make jupyter             # run the jupyter-lab server
+{%- endif %}
