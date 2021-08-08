@@ -9,6 +9,7 @@ Cookiecutter template configured with the following:
 - black
 - bandit
 - pyinstaller
+- jupyterlab
 - click
 
 A Makefile has been included so you don't have to remember commands.
