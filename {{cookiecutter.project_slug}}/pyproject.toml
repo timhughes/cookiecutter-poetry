@@ -25,6 +25,10 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8.0"
+PyYAML = "^5.4.1"
+{%- if cookiecutter.command_line_interface == "click" %}
+click = "^8.0.1"
+{%- endif %}
 {%- if cookiecutter.use_jupyterlab == "y" %}
 jupyterlab = "^3.0.0"
 pandas = "^1.2.0"
