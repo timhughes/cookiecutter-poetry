@@ -5,7 +5,7 @@
     "project_slug": "example-project",
     "module_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
     "short_description": "A simple application",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "license": [
         "MIT",
         "BSD-3-Clause",
