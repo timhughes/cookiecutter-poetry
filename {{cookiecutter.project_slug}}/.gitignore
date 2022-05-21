@@ -1,3 +1,5 @@
 dist
+build
 .venv
-
+.ipynb_checkpoints
+.env
