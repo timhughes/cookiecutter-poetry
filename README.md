@@ -76,4 +76,4 @@ You can then use the Makefile for other common commands
     make pyinstaller         # Create a binary executable using pyinstaller
     make run                 # run `poetry run example-project`
 
-    
+
