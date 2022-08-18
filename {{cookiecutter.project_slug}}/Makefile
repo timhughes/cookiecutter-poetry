@@ -25,19 +25,26 @@ showdeps: ## run poetry to show deps
 	@echo "LATEST:"
 	poetry show --latest
 
-lint: ## Runs bandit and black in check mode
-	poetry run black . --check --target-version=py36
-	@echo '-------------------------------'
+lint: ## Runs black, isort, bandit, flake8 in check mode
+	poetry run black --check .
+	poetry run isort --check .
 	poetry run bandit -r src
+	poetry run flake8 src tests
 
 format: ## Formats you code with Black
-	poetry run black . --target-version=py36
+	poetry run isort .
+	poetry run black .
 
 test: hidden ## run pytest with coverage
-	poetry run pytest -v --cov {{cookiecutter.module_name }}
+	poetry run pytest -v --cov {{ cookiecutter.module_name }}
 
 build: install lint test ## run `poetry build` to build source distribution and wheel
 	poetry build
+
+bumpversion: build ## bumpversion
+	poetry run bump2version --tag --current-version $$(git describe --tags --abbrev=0) --tag-name '{new_version}' patch
+	git push
+	git push --tags 
 
 {%- if cookiecutter.command_line_interface != "no cli" %}
 pyinstaller: install lint test ## Create a binary executable using pyinstaller
