@@ -7,7 +7,7 @@ name = "cookiecutter-poetry"
 version = "0.0.1"
 description = "Cookiecutter template for python with poetry and pytest"
 authors = [
-    {name="Tim Hughes", email="thughes@thegoldfish.org"},
+    "Tim Hughes <thughes@thegoldfish.org>",
 ]
 # Use identifier from https://spdx.org/licenses/
 license = "MIT"
