@@ -31,7 +31,7 @@ cookiecutter = "^2.1.1"
 pytest-cookies = "^0.6.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.0.0"
+pytest = "^6.2.5"
 pytest-cov = "^2.10.1"
 black = "^22.0.0"
 bandit = "^1.6.2"
