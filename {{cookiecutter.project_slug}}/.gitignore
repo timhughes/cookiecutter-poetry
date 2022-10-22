@@ -2,3 +2,5 @@ dist
 build
 .venv
 .ipynb_checkpoints
+.coverage
+.pytest_cache
