@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "cookiecutter-poetry"
 version = "0.0.1"
-description = """
-Cookiecutter template for a python project with poetry and pytest
-and other goodies"""
-authors = ["Tim Hughes <thughes@thegoldfish.org>"]
+description = "Cookiecutter template for python with poetry and pytest"
+authors = [
+    {name="Tim Hughes", email="thughes@thegoldfish.org"},
+]
 # Use identifier from https://spdx.org/licenses/
 license = "MIT"
 readme = "README.md"
