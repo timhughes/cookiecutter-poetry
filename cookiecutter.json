@@ -1,21 +1,26 @@
 {
-    "full_name": "Tim Hughes",
-    "email": "thughes@thegoldfish.org",
-    "github_name": "timhughes",
-    "project_slug": "example-project",
-    "module_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
-    "short_description": "A simple application",
-    "version": "0.1.0",
-    "license": [
-        "MIT",
-        "BSD-3-Clause",
-        "GPL-3.0-or-later",
-        "Proprietary"
-    ],
-    "command_line_interface": [
-      "click",
-      "no cli"
-    ],
-    "use_jupyterlab": "n",
-    "add_badges": "y"
+  "full_name": "Tim Hughes",
+  "email": "thughes@thegoldfish.org",
+  "github_name": "timhughes",
+  "project_slug": "example-project",
+  "module_name": "{{ cookiecutter.project_slug|lower|replace('-', '_') }}",
+  "short_description": "A simple application",
+  "version": "0.0.1",
+  "license": [
+    "MIT",
+    "GPL-3.0-or-later",
+    "Proprietary"
+  ],
+  "command_line_interface": [
+    "no cli",
+    "click"
+  ],
+  "use_jupyterlab": [
+    "n",
+    "y"
+  ],
+  "add_badges": [
+    "n",
+    "y"
+  ]
 }
