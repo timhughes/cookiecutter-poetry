@@ -43,9 +43,6 @@ reorder-python-imports = "^2.3.6"
 pyinstaller = "^4.1"
 
 [tool.pytest.ini_options]
-pythonpath = [
-  "src"
-]
 # Example
 filterwarnings = [
     "ignore::DeprecationWarning:moto.*:",
