@@ -16,6 +16,12 @@ classifiers = [
     {%- endif %}
     "Development Status :: 1 - Planning",
 ]
+{%- if cookiecutter.project_slug|lower|replace('-', '_') != cookiecutter.module_name %}
+packages = [
+    { include = "{{ cookiecutter.module_name }}", from = "src" }
+]
+{%- endif %}
+
 [tool.poetry.urls]
 # If you publish you package on PyPI, these will appear in the Project Links section.
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }}/issues"
