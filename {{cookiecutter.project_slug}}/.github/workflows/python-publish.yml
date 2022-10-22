@@ -1,7 +1,7 @@
 #  To use test.pypi.org you you should swap they publish command for these two lines
 #
 #        poetry config repositories.testpypi https://test.pypi.org/legacy/
-#        poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
+#        poetry publish --repository testpypi --username __token__ --password {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
 
 name: Publish to PyPI
 
@@ -28,4 +28,4 @@ jobs:
       run: |
         poetry version $(git describe --tags --abbrev=0)
         poetry build
-        poetry publish --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
+        poetry publish --username __token__ --password {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
