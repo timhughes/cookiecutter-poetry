@@ -105,7 +105,6 @@ def test_make_help(cookies):
 def test_bake_selecting_license(cookies):
     license_strings = {
         "MIT": "MIT License",
-        "BSD-3-Clause": "BSD License",
         "GPL-3.0-or-later": "GNU GENERAL PUBLIC LICENSE",
         "Proprietary": "Proprietary and confidential",
     }
