@@ -43,7 +43,7 @@ jupyterlab_git = "^0.23.3"
 jupyterlab_widgets = "^1.0.0"
 {%- endif %}
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 bandit = "^1.6.2"
 black = "^22.0"
 bump2version = "^1.0.1"
@@ -55,6 +55,7 @@ pytest = "^7.0.1"
 pytest-cov = "^3.0"
 pytest-xdist = "^2.5.0"
 vulture = "^2.3"
+mypy = "^0.982"
 {%- if cookiecutter.command_line_interface != "no cli" %}
 pyinstaller = "^4.1"
 {%- endif %}
