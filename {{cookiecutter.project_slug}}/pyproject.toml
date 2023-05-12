@@ -21,7 +21,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }}/issues"
 
 [tool.poetry.scripts]
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.module_name }}.cli:cli"
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.module_name }}.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.8.0"
