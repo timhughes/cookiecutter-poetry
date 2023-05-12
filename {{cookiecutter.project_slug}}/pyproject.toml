@@ -36,7 +36,7 @@ packages = [
 {%- endif %}
 
 [tool.poetry.dependencies]
-python = "^3.11.0"
+python = "^3.10.0"
 {%- if cookiecutter.command_line_interface == "click" %}
 click = "*"
 {%- endif %}
