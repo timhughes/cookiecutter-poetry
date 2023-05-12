@@ -21,5 +21,5 @@ if __name__ == "__main__":
         remove_dir("notebooks")
 
     if "no cli" in "{{ cookiecutter.command_line_interface|lower }}":
-        cli_file = os.path.join("src", "{{ cookiecutter.module_name }}", "cli.py")
+        cli_file = os.path.join("src", "{{ cookiecutter.module_name }}", "__main__.py")
         remove_file(cli_file)
