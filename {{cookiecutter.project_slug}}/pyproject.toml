@@ -26,29 +26,29 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.8.0"
 {%- if cookiecutter.use_jupyterlab == "y" %}
-jupyterlab = "^3.0.0"
-pandas = "^1.2.0"
-jupyterlab_git = "^0.23.3"
-jupyterlab_widgets = "^1.0.0"
+jupyterlab = "*"
+pandas = "*"
+jupyterlab_git = "*"
+jupyterlab_widgets = "*"
 {%- endif %}
 
-[tool.poetry.dev-dependencies]
-pytest = "^6.0.1"
-pytest-cov = "^2.10.1"
-pytest-xdist = "^2.1.0"
-black = {version = "^20.8b1", allow-prereleases = true}
-bandit = "^1.6.2"
-pylint = "^2.6.0"
-bump2version = "^1.0.1"
-vulture = "^2.3"
-jedi-language-server = "^0.22.0"
-reorder-python-imports = "^2.3.6"
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+black = "*"
+bandit = "*"
+pylint = "*"
+bump2version = "*"
+vulture = "*"
+jedi-language-server = "*"
+reorder-python-imports = "*"
 {%- if cookiecutter.command_line_interface != "no cli" %}
-pyinstaller = "^4.1"
+pyinstaller = "*"
 {%- endif %}
 
 [build-system]
-requires = ["poetry_core>=1.0.0"]
+requires = ["poetry_core"]
 build-backend = "poetry.core.masonry.api"
 
 
