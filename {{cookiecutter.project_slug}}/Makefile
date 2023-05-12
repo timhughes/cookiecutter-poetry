@@ -26,12 +26,12 @@ showdeps: ## run poetry to show deps
 	poetry show --latest
 
 lint: ## Runs bandit and black in check mode
-	poetry run black . --check --target-version=py36
+	poetry run black . --check --target-version=py311
 	@echo '-------------------------------'
 	poetry run bandit -r src
 
 format: ## Formats you code with Black
-	poetry run black . --target-version=py36
+	poetry run black . --target-version=py311
 
 test: hidden ## run pytest with coverage
 	poetry run pytest --cov {{cookiecutter.module_name }}
