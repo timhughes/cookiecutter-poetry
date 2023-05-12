@@ -17,7 +17,6 @@ def remove_dir(filepath):
 
 
 if __name__ == "__main__":
-
     if "{{ cookiecutter.use_jupyterlab }}" != "y":
         remove_dir("notebooks")
 
