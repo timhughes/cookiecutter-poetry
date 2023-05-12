@@ -87,7 +87,8 @@ def test_year_compute_in_license_file(cookies):
 
 
 def test_bake_and_run_tests(cookies):
-    with bake_in_temp_dir(cookies) as result:
+    context = {"command_line_interface": "click"}
+    with bake_in_temp_dir(cookies, extra_context=context) as result:
         assert result.project.isdir()
         run_inside_dir("make install", str(result.project)) == 0
         run_inside_dir("make test", str(result.project)) == 0

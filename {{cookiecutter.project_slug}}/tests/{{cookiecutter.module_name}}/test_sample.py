@@ -20,4 +20,9 @@ def test_click_cli():
   assert 'Start {{cookiecutter.project_slug}} in server mode' in result.output
   assert 'Start {{cookiecutter.project_slug}} in server mode' in result.stdout
   assert '' == result.stderr
+
+  result = runner.invoke(cli, ['--version'])
+  assert result.exit_code == 0
+  assert 'cli, version 0.0.1' in result.output
+
 {%- endif %}

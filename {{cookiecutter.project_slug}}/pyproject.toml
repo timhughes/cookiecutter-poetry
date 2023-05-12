@@ -32,7 +32,7 @@ packages = [
 
 [tool.poetry.scripts]
 {%- if cookiecutter.command_line_interface != "no cli" %}
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.module_name }}.cli:cli"
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.module_name }}.__main__:cli"
 {%- endif %}
 
 [tool.poetry.dependencies]
@@ -47,7 +47,7 @@ jupyterlab_git = "*"
 jupyterlab_widgets = "*"
 {%- endif %}
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.group.test.dependencies]
 bandit = "*"
 black = "*"
 bump2version = "*"
@@ -55,7 +55,6 @@ flake8 = "*"
 isort = "*"
 jedi-language-server = "*"
 mypy = "*"
-pyinstaller = "*"
 pylint = "*"
 pytest = "*"
 pytest-cov = "*"

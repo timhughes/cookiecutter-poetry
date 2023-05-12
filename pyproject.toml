@@ -46,6 +46,12 @@ pytest-cov = "*"
 reorder-python-imports = "*"
 vulture = "*"
 
+[tool.isort]
+profile = "black"
+
+[tool.black]
+target-version = ['py311']
+
 [tool.pytest.ini_options]
 # Example
 filterwarnings = [
