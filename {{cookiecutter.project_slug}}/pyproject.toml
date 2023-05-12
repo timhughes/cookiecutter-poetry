@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry_core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
@@ -32,43 +36,40 @@ packages = [
 {%- endif %}
 
 [tool.poetry.dependencies]
-python = "^3.8.0"
+python = "^3.11.0"
 {%- if cookiecutter.command_line_interface == "click" %}
-click = "^8.0.1"
+click = "*"
 {%- endif %}
 {%- if cookiecutter.use_jupyterlab == "y" %}
-jupyterlab = "^3.0.0"
-pandas = "^1.2.0"
-jupyterlab_git = "^0.23.3"
-jupyterlab_widgets = "^1.0.0"
+jupyterlab = "*"
+pandas = "*"
+jupyterlab_git = "*"
+jupyterlab_widgets = "*"
 {%- endif %}
 
 [tool.poetry.group.dev.dependencies]
-bandit = "^1.6.2"
-black = "^22.0"
-bump2version = "^1.0.1"
-isort= "^5.0.8"
-flake8 = "^5.0.4"
-jedi-language-server = "^0.22.0"
-pylint = "^2.6.0"
-pytest = "^7.0.1"
-pytest-cov = "^3.0"
-pytest-xdist = "^2.5.0"
-vulture = "^2.3"
-mypy = "^0.982"
+bandit = "*"
+black = "*"
+bump2version = "*"
+flake8 = "*"
+isort = "*"
+jedi-language-server = "*"
+mypy = "*"
+pyinstaller = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+reorder-python-imports = "*"
+vulture = "*"
 {%- if cookiecutter.command_line_interface != "no cli" %}
-pyinstaller = "^4.1"
+pyinstaller = "*"
 {%- endif %}
-
-[build-system]
-requires = ["poetry_core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
 
 [tool.black]
-target-version = ['py38']
+target-version = ['py311']
 
 [tool.pytest.ini_options]
 # Example

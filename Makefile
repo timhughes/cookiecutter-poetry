@@ -26,12 +26,12 @@ showdeps: ## run poetry to show deps
 	poetry show --latest
 
 lint: ## Runs bandit and black in check mode
-	poetry run black tests hooks --check --target-version=py37
+	poetry run black tests hooks --check
 	@echo '-------------------------------'
 	poetry run bandit -r hooks
 
 format: ## Formats you code with Black
-	poetry run black tests hooks --target-version=py37
+	poetry run black tests hooks
 
 test: hidden ## run pytest with coverage
 	poetry run pytest -v tests
