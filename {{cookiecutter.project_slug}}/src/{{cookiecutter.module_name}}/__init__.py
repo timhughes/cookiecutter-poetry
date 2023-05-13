@@ -14,7 +14,7 @@ else:
     from importlib import metadata
 
 
-module_metadata = metadata.metadata("{{ cookiecutter.module_name }}")
+module_metadata = metadata.metadata("{{ cookiecutter.project_slug }}")
 
 __author__ = f"{module_metadata['Author']} <{module_metadata['Author-email']}>"
 __version__ = module_metadata["Version"]
