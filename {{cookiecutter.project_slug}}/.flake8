@@ -1,7 +1,12 @@
 # Config for tools that do not use pyproject.toml yet
 [flake8]
+select = B,B9,C,D,DAR,E,F,N,RST,W
+extend-ignore = E203,E501,RST201,RST203,RST301,W503
 max-line-length = 88
-extend-ignore = E203
+max-complexity = 10
+docstring-convention = google
+rst-roles = class,const,func,meth,mod,ref
+rst-directives = deprecated
 exclude =
     __pycache__,
     .git,

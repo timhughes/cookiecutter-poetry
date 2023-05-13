@@ -3,7 +3,7 @@
 # Makefile
 #
 .DEFAULT_GOAL := help
-.PHONY: test help
+.PHONY: test help docs_build docs
 
 
 help:  ## these help instructions
@@ -15,9 +15,17 @@ hidden: # example undocumented, for internal usage only
 pydoc: ## Run a pydoc server and open the browser
 	poetry run python -m pydoc -b
 
+docs_build: ## Build the documentation
+	poetry run sphinx-apidoc --module-first -o docs/api src/example_project/
+	poetry run sphinx-build --color docs docs/_build
+
+docs: ## Build and serve the documentation with live reloading on file changes
+	poetry run sphinx-apidoc --module-first -o docs/api src/example_project/
+	poetry run sphinx-autobuild --open-browser docs docs/_build
+
 install: ## Run `poetry install`
 	poetry install
-
+	
 showdeps: ## run poetry to show deps
 	@echo "CURRENT:"
 	poetry show --tree
@@ -30,6 +38,7 @@ lint: ## Runs black, isort, bandit, flake8 in check mode
 	poetry run isort --check .
 	poetry run bandit -r src
 	poetry run flake8 src tests
+	poetry run ruff check .
 
 format: ## Formats you code with Black
 	poetry run isort .

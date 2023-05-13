@@ -2,13 +2,12 @@
 
 {% if cookiecutter.add_badges == 'y' %}
 [![PyPi](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
-[![Travis](https://img.shields.io/travis/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }}.svg)](https://travis-ci.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }})
-[![Documentation](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest)](https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest)
-[![Updates](https://pyup.io/repos/github/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }}/shield.svg)](https://pyup.io/repos/github/{{ cookiecutter.github_name }}/{{ cookiecutter.project_slug }}/)
+[![Travis](https://img.shields.io/travis/{{ cookiecutter.github_user }}/{{ cookiecutter.project_slug }}.svg)](https://travis-ci.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_slug }})
+[![Documentation](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("*", "-") }}/badge/?version=latest)](https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest)
+[![Updates](https://pyup.io/repos/github/{{ cookiecutter.github_user }}/{{ cookiecutter.project_slug }}/shield.svg)](https://pyup.io/repos/github/{{ cookiecutter.github_user }}/{{ cookiecutter.project_slug }}/)
 {% endif %}
 
 {{ cookiecutter.short_description }}
-
 
 ## Developing
 
