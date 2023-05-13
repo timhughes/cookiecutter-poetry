@@ -47,7 +47,7 @@ def version(verbose):
     type=click.Path(exists=True),
 )
 def serve(config_file):
-    """Start {{cookiecutter.project_slug}} in server mode"""
+    """Start {{cookiecutter.package_name}} in server mode"""
     
     settings = {}
     if config_file:
@@ -86,4 +86,4 @@ def serve(config_file):
 
 
 if __name__ == "__main__":
-    cli(prog_name="{{cookiecutter.project_slug}}")
+    cli(prog_name="{{cookiecutter.package_name}}")

@@ -57,7 +57,7 @@ bumpversion: build ## bumpversion
 
 {%- if cookiecutter.command_line_interface != "no cli" %}
 pyinstaller: install lint test ## Create a binary executable using pyinstaller
-	poetry run pyinstaller src/{{ cookiecutter.module_name }}/cli.py --onefile --name {{ cookiecutter.project_slug }}
+	poetry run pyinstaller src/{{ cookiecutter.module_name }}/cli.py --onefile --name {{ cookiecutter.package_name }}
 
 {%- endif %}
 {%- if cookiecutter.use_jupyterlab == "y" %}
@@ -65,5 +65,5 @@ jupyter: ## run the jupyter-lab server
 	poetry run jupyter-lab
 
 {%- endif %}
-run: ## run `poetry run {{ cookiecutter.project_slug }}`
-	poetry run {{ cookiecutter.project_slug }}
+run: ## run `poetry run {{ cookiecutter.package_name }}`
+	poetry run {{ cookiecutter.package_name }}

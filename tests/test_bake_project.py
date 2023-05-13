@@ -57,11 +57,11 @@ def check_output_inside_dir(command, dirpath):
 
 
 def project_info(result):
-    """Get toplevel dir, project_slug, and project dir from baked cookies"""
+    """Get toplevel dir, package_name, and project dir from baked cookies"""
     project_path = str(result.project)
-    project_slug = os.path.split(project_path)[-1]
-    project_dir = os.path.join(project_path, "src", project_slug.replace("-", "_"))
-    return project_path, project_slug, project_dir
+    package_name = os.path.split(project_path)[-1]
+    project_dir = os.path.join(project_path, "src", package_name.replace("-", "_"))
+    return project_path, package_name, project_dir
 
 
 def test_bake_with_defaults(cookies):

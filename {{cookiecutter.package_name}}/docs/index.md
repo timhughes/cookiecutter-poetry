@@ -13,5 +13,5 @@ maxdepth: 2
 
 usage
 License <license>
-Changelog <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_slug}}/releases>
+Changelog <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.package_name}}/releases>
 ```

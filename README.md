@@ -25,7 +25,7 @@ eg:
     author [Tim Hughes]:
     email [thughes@thegoldfish.org]:
     github_user [timhughes]:
-    project_slug [example-project]:
+    package_name [example-project]:
     module_name [example_project]:
     short_description [A simple application]:
     version [0.0.1]:
