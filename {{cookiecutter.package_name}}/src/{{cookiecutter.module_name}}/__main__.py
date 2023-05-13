@@ -25,7 +25,7 @@ logger = logging.getLogger("{{cookiecutter.module_name}}")
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 @click.group()
-@click.version_option()
+@click.version_option(package_name="{{cookiecutter.package_name}}")
 def cli():
     pass
 
