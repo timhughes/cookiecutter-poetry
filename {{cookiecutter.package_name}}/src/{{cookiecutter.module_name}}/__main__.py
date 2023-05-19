@@ -75,7 +75,7 @@ def serve(config_file):
         app.start()
     except KeyboardInterrupt:
         pass
-    except Exception as exc:
+    except Exception as exc:  # pylint: disable=broad-except
         logger.exception("Unexpected exception: %s", exc)
     finally:
         logger.info("Shutting down")
