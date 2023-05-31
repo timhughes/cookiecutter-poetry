@@ -54,7 +54,11 @@ target-version = ['py311']
 
 [tool.pytest.ini_options]
 # Example
+pythonpath = [
+  "src"
+]
 filterwarnings = [
     "ignore::DeprecationWarning:moto.*:",
     "ignore::DeprecationWarning:boto.*:",
 ]
+
