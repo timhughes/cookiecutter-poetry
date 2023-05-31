@@ -106,6 +106,9 @@ lines-after-imports = 2
 skips = ['*_test.py', '*/test_*.py']
 
 [tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
 # Example
 filterwarnings = [
     "ignore::DeprecationWarning:moto.*:",
