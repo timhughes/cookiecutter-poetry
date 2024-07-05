@@ -53,6 +53,20 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+{% elif cookiecutter.license == 'WTFPL' -%}
+        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                    Version 2, December 2004 
+
+ Copyright (C) {% now 'local', '%Y' %}  {{ cookiecutter.author }} {{ cookiecutter.email }}
+
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
 {% elif cookiecutter.license == 'Proprietary' -%}
 Proprietary and confidential
 Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.author }}
