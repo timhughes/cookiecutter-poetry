@@ -12,7 +12,7 @@ license = "{{ cookiecutter.license }}"
 readme = "README.md"
 homepage = "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}"
 repository = "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}"
-documentation = "README.md"
+documentation = "https://README.md"
 classifiers = [
     # https://pypi.org/classifiers/
     {%- if cookiecutter.command_line_interface != "no cli" %}
