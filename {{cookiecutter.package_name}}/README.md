@@ -1,7 +1,7 @@
 # {{ cookiecutter.package_name }}
 
 {% if cookiecutter.add_badges == 'y' %}
-[![PyPi](https://img.shields.io/pypi/v/{{ cookiecutter.package*name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.package_name }})
+[![PyPi](https://img.shields.io/pypi/v/{{ cookiecutter.package_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.package_name }})
 [![Travis](https://img.shields.io/travis/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}.svg)](https://travis-ci.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }})
 [![Documentation](https://readthedocs.org/projects/{{ cookiecutter.package_name | replace("\*", "-") }}/badge/?version=latest)](https://{{ cookiecutter.package_name | replace("*", "-") }}.readthedocs.io/en/latest/?badge=latest)
 [![Updates](https://pyup.io/repos/github/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}/shield.svg)](https://pyup.io/repos/github/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}/)
